@@ -165,14 +165,14 @@ nav h1 a:hover, footer a:hover {
     column-gap: 24px;
 }
 
-@media screen and (min-width: 500px)and (max-width: 600px) {
+@media screen and (min-width: 500px) and (max-width: 949px) {
     #restaurants-list {
         column-count: 2;
         column-gap: 24px;
     }
 }
 
-@media screen and (min-width: 300px)and (max-width: 600px) {
+@media screen and (max-width: 499px) {
     #restaurants-list {
         column-count: 1;
         column-gap: 24px;
@@ -302,6 +302,12 @@ nav h1 a:hover, footer a:hover {
     border-top: 1px solid #fff;
     padding: 40px 40px 30px;
     width: 50%;
+}
+
+@media screen and (max-width: 620px) {
+    #restaurant-container, #reviews-container {
+        width: 30%;
+    }
 }
 
 #reviews-container {
