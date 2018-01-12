@@ -6,9 +6,6 @@ body, td, th, p {
     font-size: 10pt;
     color: #333;
     line-height: 1.5;
-}
-
-body {
     background-color: #fdfdfd;
     margin: 0;
     position: relative;
@@ -162,12 +159,14 @@ nav h1 a:hover, footer a:hover {
     padding: 30px 15px 60px;
     text-align: center;
     column-count: 3;
+    -webkit-column-count: 3;
     column-gap: 24px;
 }
 
 @media screen and (min-width: 500px) and (max-width: 949px) {
     #restaurants-list {
         column-count: 2;
+        -webkit-column-count: 2;
         column-gap: 24px;
     }
 }
@@ -175,6 +174,7 @@ nav h1 a:hover, footer a:hover {
 @media screen and (max-width: 499px) {
     #restaurants-list {
         column-count: 1;
+        -webkit-column-count: 1;
         column-gap: 24px;
     }
 }
