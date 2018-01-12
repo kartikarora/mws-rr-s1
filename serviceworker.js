@@ -8,6 +8,7 @@ self.addEventListener('install', function (event) {
                     '/js/dbhelper.js',
                     '/js/main.js',
                     '/data/restaurants.json',
+                    'https://raw.githubusercontent.com/kartikarora/mws-rr-s1/master/data/restaurants.json'
                 ]
             );
         })
