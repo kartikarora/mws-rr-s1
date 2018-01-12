@@ -9,12 +9,13 @@ var markers = [];
  */
 document.addEventListener('DOMContentLoaded', (event) => {
 
+    // Register service worker with root as scope
     if (!('serviceWorker' in navigator)) {
-        console.log('Service Worker not supported');
+        console.debug('Service Worker not supported');
     } else {
         navigator.serviceWorker.register('serviceworker.js')
             .then(function (registration) {
-                console.log('SW registered! Scope is:', registration.scope);
+                console.info('SW registered! Scope is:', registration.scope);
             }); // .catch a registration error
     }
 
