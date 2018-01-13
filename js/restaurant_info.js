@@ -25,7 +25,7 @@ window.initMap = () => {
  */
 fetchRestaurantFromURL = (callback) => {
     if (self.restaurant) { // restaurant already fetched!
-        callback(null, self.restaurant)
+        callback(null, self.restaurant);
         return;
     }
     const id = getParameterByName('id');
@@ -96,7 +96,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     const container = document.getElementById('reviews-container');
-    const title = document.createElement('h2');
+    const title = document.createElement('h3');
     title.innerHTML = 'Reviews';
     container.appendChild(title);
 
@@ -118,15 +118,15 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
     const li = document.createElement('li');
-    const name = document.createElement('h3');
+    const name = document.createElement('h4');
     name.innerHTML = review.name;
     li.appendChild(name);
 
-    const date = document.createElement('h4');
+    const date = document.createElement('h5');
     date.innerHTML = review.date;
     li.appendChild(date);
 
-    const rating = document.createElement('h4');
+    const rating = document.createElement('h5');
     rating.innerHTML = `Rating: ${review.rating}`;
     li.appendChild(rating);
 
@@ -145,6 +145,7 @@ fillBreadcrumb = (restaurant = self.restaurant) => {
     const li = document.createElement('li');
     li.innerHTML = restaurant.name;
     li.tabIndex = 2;
+    li.setAttribute('aria-current', 'page');
     breadcrumb.appendChild(li);
 };
 
