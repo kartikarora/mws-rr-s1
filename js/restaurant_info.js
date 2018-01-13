@@ -30,7 +30,7 @@ fetchRestaurantFromURL = (callback) => {
     }
     const id = getParameterByName('id');
     if (!id) { // no id found in URL
-        error = 'No restaurant id in URL'
+        error = 'No restaurant id in URL';
         callback(error, null);
     } else {
         DBHelper.fetchRestaurantById(id, (error, restaurant) => {
@@ -57,7 +57,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
     const image = document.getElementById('restaurant-img');
     image.className = 'restaurant-img';
-    image.alt = 'Image of ' + restaurant.name;
+    image.alt = 'Restaurant name is ' + restaurant.name + '. Cuisine is ' + restaurant.cuisine_type;
     image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
     const cuisine = document.getElementById('restaurant-cuisine');
@@ -144,6 +144,7 @@ fillBreadcrumb = (restaurant = self.restaurant) => {
     const breadcrumb = document.getElementById('breadcrumb');
     const li = document.createElement('li');
     li.innerHTML = restaurant.name;
+    li.tabIndex = 2;
     breadcrumb.appendChild(li);
 };
 

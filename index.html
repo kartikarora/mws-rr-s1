@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css"/>
     <link rel="stylesheet" href="css/styles.css">
     <title>Restaurant Reviews</title>
@@ -10,22 +11,22 @@
 <body>
 <header>
     <nav>
-        <h1><a href="/" tabindex="-1">Restaurant Reviews</a></h1>
+        <h1><a href="/" tabindex="1">Restaurant Reviews</a></h1>
     </nav>
 </header>
 
 <main id="maincontent">
-    <section id="map-container" aria-labelledby="Area on Map">
+    <section aria-labelledby="Area on Map" tabindex="2">
         <div id="map"></div>
     </section>
     <section>
         <div class="filter-options">
             <h2>Filter Results</h2>
-            <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" tabindex="1"
+            <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" tabindex="3"
                     aria-labelledby="Select Neighborhood">
                 <option value="all">All Neighborhoods</option>
             </select>
-            <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" tabindex="2"
+            <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" tabindex="4"
                     aria-labelledby="Select Cuisines">
                 <option value="all">All Cuisines</option>
             </select>
