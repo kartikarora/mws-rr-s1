@@ -161,28 +161,9 @@ nav h1 a:hover, footer a:hover {
     margin: 12px;
     padding: 30px 15px 60px;
     text-align: center;
-    column-count: 3;
-    display: inline-block;
-    break-inside: avoid-column;
-    column-gap: 24px;
-}
-
-@media screen and (min-width: 500px) and (max-width: 949px) {
-    #restaurants-list {
-        column-count: 2;
-        display: inline-block;
-        break-inside: avoid-column;
-        column-gap: 24px;
-    }
-}
-
-@media screen and (max-width: 499px) {
-    #restaurants-list {
-        column-count: 1;
-        display: inline-block;
-        break-inside: avoid-column;
-        column-gap: 24px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #restaurants-list li {
@@ -191,9 +172,21 @@ nav h1 a:hover, footer a:hover {
     border: 2px solid #f3f3f3;
     display: block;
     list-style-type: none;
-    margin: 0 0 30px;
+    margin: 15px 15px 15px;
     overflow: hidden;
     position: relative;
+}
+
+@media screen and (min-width: 450px) {
+    #restaurants-list li {
+        max-width: 40%;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    #restaurants-list li {
+        max-width: 30%;
+    }
 }
 
 #restaurants-list .restaurant-img {
@@ -310,14 +303,13 @@ nav h1 a:hover, footer a:hover {
     border-top: 1px solid #aaaaaa;
 }
 
-
 #reviews-container h2 {
-     color: #f58500;
-     font-size: 22pt;
-     font-weight: 300;
-     letter-spacing: -1px;
-     padding-bottom: 1pt;
- }
+    color: #f58500;
+    font-size: 22pt;
+    font-weight: 300;
+    letter-spacing: -1px;
+    padding-bottom: 1pt;
+}
 
 #reviews-container h3 {
     color: #f58500;
